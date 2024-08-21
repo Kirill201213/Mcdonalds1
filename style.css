@@ -99,9 +99,15 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
 .logo{
   display: flex;
   padding-top: 50px;
+}
+
+.mcdonald {
+  width: 200px;
+  height: 200px;
 }
 
 a {
