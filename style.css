@@ -363,3 +363,8 @@ tr{
   align-items: center;
   gap: 20px;
 }
+
+.posituka{
+  text-decoration: none;
+  color: black;
+}
