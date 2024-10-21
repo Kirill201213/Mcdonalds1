@@ -124,104 +124,30 @@
     </div>
 </header>
 <main>
- 
-     <div class="slider">
-      <div class="slide active">
-        <img src="folde/Slider_Flurry_BubbleGum.jpg" alt="Slide 1"/>
-      </div>
-      <div class="slide">
-        <img src="folde/McD_ROYALS_instore_march2024_Slider_00-1.jpg" alt="Slide 2"/>
-      </div>
-      <div class="slide">
-        <img src="folde/Slider_HMR_Book_17.png" alt="Slide 3"/>
-      </div>
-      <div class="slide">
-        <img src="folde/slider-GMAL-banner-3.jpg" alt="Slide 4"/>
-      </div>
-      <div class="slide">
-        <img src="folde/Best_slider_menu.jpg" alt="Slide 5"/>
-      </div>
-      <div class="button prev">&#10094;</div>
-      <div class="button next">&#10095;</div>
-    </div>
-   
-    <script>
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-   
-    function showSlide(n) {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (n + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-   
-    document.querySelector('.prev').addEventListener('click', () => showSlide(currentSlide - 1));
-    document.querySelector('.next').addEventListener('click', () => showSlide(currentSlide + 1));
-   
-    showSlide(currentSlide);
-    </script>
-
-
-
-
-    <input  type="radio" name="slider" id="swich1" checked>
-    <input type="radio" name="slider" id="swich2">
-    <input type="radio" name="slider" id="swich3">
-    <input type="radio" name="slider" id="swich4">
-    <input type="radio" name="slider" id="swich5">
-      <div id="slides">
-        <div id="overflow">
-          <div class="inner">
-            <div class="slide slide_1">
-            <div class="slide-content">
-              <img src="Slider_Flurry_BubbleGum.jpg"/>
-              <p></p>
-            </div>
-            </div>
-            <div class="slide slide_2">
-              <div class="slide-content">
-                <img src="McD_ROYALS_instore_march2024_Slider_00-1.jpg"/>
-                <p></p>
-              </div>
-              </div>
-              <div class="slide slide_3">
-                <div class="slide-content">
-                  <img src="Slider_HMR_Book_17.png-1.jpg"/>
-                  <p></p>
-                </div>
-                </div>
-                <div class="slide slide_4">
-                  <div class="slide-content">
-                    <img src="slider-GMAL-banner-3.jpg"/>
-                    <p></p>
-                  </div>
-                  </div>
-
-
-                <div class="slide slide_5">
-                    <div class="slide-content">
-                      <img src="Best_slider_menu.jpg"/>
-                      <p></p>
-                    </div>
-                    </div>
-          </div>
+    <section class="container">
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img class="slider-1 active" id="slider-1" src="https://www.mcdonalds.com/content/dam/sites/ua/nfl/hero/slider/slider_McCafe_winter_v2.jpg">
+          
+            <img class="slider-2" id="slider-2" src="https://www.mcdonalds.com/content/dam/sites/ua/nfl/hero/slider/McCrispy_Delux_slider.png">
+            
+            <img class="slider-3" id="slider-3" src="https://www.mcdonalds.com/content/dam/sites/ua/nfl/hero/slider/slider_UABurgers_2024.png">
+            
+            <img class="slider-4" id="slider-4" src="https://www.mcdonalds.com/content/dam/sites/ua/nfl/hero/slider/slider-GMAL-banner-3.jpg">
+            
         </div>
-      </div>
-      <div id="controls">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-        <label for="slide4"></label>
-        <label for="slide5"></label>
-      </div>
-      <div id="bullets">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-        <label for="slide4"></label>
-        <label for="slide5"></label>
-      </div>
- 
+        <div class="slider-nav">
+            <a href="#slider-1"></a>
+            <a href="#slider-2"></a>
+            <a href="#slider-3"></a>
+            <a href="#slider-4"></a>
+        </div>
+        <button class="prev">&lt;</button> <!-- Стрелка влево -->
+        <button class="next">&gt;</button> <!-- Стрелка вправо -->
+    <button class="pause-play">Пауза</button>
+</div>
+</section>
+
 
 
       <div class="section_one">
@@ -359,4 +285,77 @@
 </div>
 </footer>
 </body>
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slider img');
+const navLinks = document.querySelectorAll('.slider-nav a');
+const backBtn = document.querySelector('.prev');
+const forwardBtn = document.querySelector('.next');
+const pausePlayBtn = document.querySelector('.pause-play');
+
+let autoSlideInterval;
+let isPlaying = true;
+
+function showSlide(index) {
+    // Убираем класс active у текущего слайда
+    slides[currentSlide].classList.remove('active');
+    
+    // Обновляем индекс текущего слайда
+    currentSlide = (index + slides.length) % slides.length;
+
+    // Добавляем класс active к новому слайду
+    slides[currentSlide].classList.add('active');
+}
+
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000); // Изменено на 5000 мс (5 секунд)
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Обработчики для навигационных ссылок
+navLinks.forEach((link, index) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        showSlide(index);
+    });
+});
+
+// Инициализация первого слайда
+slides[0].classList.add('active'); // Показываем первый слайд
+startAutoSlide();
+
+// Обработчики событий для мыши
+const slider = document.querySelector('.slider-wrapper');
+
+slider.addEventListener('mouseenter', stopAutoSlide);
+slider.addEventListener('mouseleave', startAutoSlide);
+
+// Кнопки "Назад" и "Вперед"
+backBtn.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+});
+
+forwardBtn.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+});
+
+// Кнопка "Пауза/Пуск"
+pausePlayBtn.addEventListener('click', () => {
+    if (isPlaying) {
+        stopAutoSlide();
+        pausePlayBtn.textContent = 'Пуск';
+    } else {
+        startAutoSlide();
+        pausePlayBtn.textContent = 'Пауза';
+    }
+    isPlaying = !isPlaying; // Переключаем состояние
+});
+
+</script>
 </html>
