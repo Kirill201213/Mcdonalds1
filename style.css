@@ -4,6 +4,11 @@
     transform: translateY(-50%);
     cursor: pointer;
   }
+
+.pause-play{
+position: relative;
+top: -50px;
+}
  
   .button.prev {
     left: 10px;
