@@ -535,3 +535,31 @@ button {
 .slide.active {
     opacity: 1; /* Полная видимость для активного слайда */
 }
+
+.pause-play{
+position: relative;
+top: -50px;
+}
+
+.slider-nav {
+position: absolute;
+top: 85%; /* Вместо фиксированного значения используем относительное */
+left: 50%;
+
+transform: translateX(-50%);
+display: flex;
+gap: 10px;
+z-index: 1000;
+}
+
+@media(max-width: 768px) {
+.slider-nav {
+top: 65%; /* Adjust this value for smaller screens */
+}
+}
+
+@media(max-width: 480px) {
+.slider-nav {
+top: 60%; /* Adjust this value for mobile screens */
+}
+}
