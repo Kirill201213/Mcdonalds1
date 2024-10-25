@@ -1,100 +1,3 @@
-.button{
-display: flex;
-justify-content: center;
-}
-.full-menu-button {
-padding: 10px 30px;
-border: 1px solid gray;
-border-radius: 5px;
-text-align: center;
-margin-top: 20px;
-cursor: pointer;
-background-color: #fff;
-display: block;
-}
-
-
-.full-menu-button:hover {
-box-shadow: 0px 3px 3px gray;
-}
-
-.second_row, .first_row, .third_row, .fourth_row{
-display: flex;
-justify-content: center;
-}
-.fourth_row {
-
-align-items: center;
-width:100%;
-}
-
-details[open] .header-summary::after {
-transform: rotate(270deg) scaleX(1.3);
-
-
-}
-
-.menu-content {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-margin-top: 10px;
-background-color: #fff;
-padding: 15px;
-border: 1px solid #e0e0e0;
-max-width: 400px;
-margin: 0 auto;
-}
-
-
-.menu-item {
-text-align: center;
-width: 20%;
-max-width: 100px;
-}
-
-.menu-item img {
-width: 80px;
-height: auto;
-}
-
-.menu-item span {
-display: block;
-margin-top: 5px;
-font-size: 14px;
-}
-
-
-.header-summary {
-list-style: none;
-cursor: pointer;
-display: inline-block;
-position: relative;
-font-size: 18px;
-border: none;
-padding-right: 20px;
-}
-
-
-.header-summary::after {
-content: 'ᐳ'; 
-font-size: 12px;
-margin-left: 8px;
-display: inline-block;
-transform: rotate(90deg) scaleX(1.3);
-transition: transform 0.3s ease;
-
-}
-
-  .button.prev {
-    left: 10px;
-  }
- 
-  .button.next {
-    right: 10px;
-  }
-
-
 nav {
   margin-left: 50px;
   font-size: 15px;
@@ -103,7 +6,8 @@ nav {
 }
 
 
-nav a, details {
+nav a,
+details {
   text-decoration: none;
   color: black;
   margin: 10px;
@@ -121,41 +25,199 @@ header {
 }
 
 
+
+
 .header_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-   width: 100%;
+  width: 100%;
 }
 
-.part_one{
+
+
+
+.first_line {
+  display: flex;
+  width: 150%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+
+
+
+.part_one {
   margin-left: 22%;
 }
 
 
-.part_two{
+.part_two {
   display: flex;
   gap: 20px;
+}
+.button{
+display: flex;
+justify-content: center;
+}
+.full-menu-button {
+padding: 10px 30px;
+border: 1px solid gray;
+border-radius: 5px;
+text-align: center;
+margin-top: 20px;
+cursor: pointer;
+background-color: #fff;
+display: block;
+}
+
+
+
+
+.full-menu-button:hover {
+box-shadow: 0px 3px 3px gray;
+}
+
+
+.second_row, .first_row, .third_row, .fourth_row{
+display: flex;
+justify-content: center;
+}
+.fourth_row {
+
+
+align-items: center;
+width:100%;
+}
+
+
+details[open] .header-summary::after {
+transform: rotate(270deg) scaleX(1.3);
+
+
 
 
 }
 
 
-.nav_and_links{
+.menu-content {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 10px;
+background-color: #fff;
+padding: 15px;
+border: 1px solid #e0e0e0;
+max-width: 400px;
+margin: 0 auto;
+}
+
+
+
+
+.menu-item {
+text-align: center;
+width: 20%;
+max-width: 100px;
+}
+
+
+.menu-item img {
+width: 80px;
+height: auto;
+}
+
+
+.menu-item span {
+display: block;
+margin-top: 5px;
+font-size: 14px;
+}
+
+
+
+
+.header-summary {
+list-style: none;
+cursor: pointer;
+display: inline-block;
+position: relative;
+font-size: 18px;
+border: none;
+padding-right: 20px;
+}
+
+
+
+
+.header-summary::after {
+content: 'ᐳ';
+font-size: 12px;
+margin-left: 8px;
+display: inline-block;
+transform: rotate(90deg) scaleX(1.3);
+transition: transform 0.3s ease;
+
+
+}
+
+
+
+
+.nav_and_links {
   display: flex;
   justify-content: space-between;
 }
 
-.logo{
+
+
+
+.logo {
   display: flex;
   padding-top: 50px;
 }
+
+
+
 
 .mcdonald {
   width: 80px;
   height: 70px;
 }
+
+
+
+
+
+
+
+
+.qqq {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+
+.r {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.logo{
+  display: flex;
+  padding-top: 50px;
+}
+
+
+.mcdonald {
+  width: 80px;
+  height: 70px;
+}
+
 
 a {
   padding: 0px;
@@ -164,9 +226,13 @@ a {
 }
 
 
+
+
 main{
   padding: 100px;
 }
+
+
 
 
 .mmm{
@@ -174,9 +240,13 @@ main{
 }
 
 
+
+
 .main{
   font-size: 28px;
 }
+
+
 
 
 .e{
@@ -184,14 +254,20 @@ width: 500px;
 }
 
 
+
+
 .h{
    width: 150px ;
 }
 
 
+
+
 .j{
   width: 500px;
 }
+
+
 
 
 .script{
@@ -205,16 +281,24 @@ width: 500px;
 }
 
 
+
+
 .script:hover{
   background-color: blueviolet;
   color:white;
 }
 
 
+
+
 .qqq{
   display: flex;
   justify-content: space-evenly;
 }
+
+
+
+
 
 
 
@@ -228,9 +312,15 @@ width: 500px;
 
 
 
+
+
+
+
 footer h2{
   font-size: 15px;
 }
+
+
 
 
 tr{
@@ -238,9 +328,13 @@ tr{
 }
 
 
+
+
 .footer{
   width: 20px;
 }
+
+
 
 
 .a{
@@ -248,9 +342,13 @@ tr{
 }
 
 
+
+
 .m{
   width: 100px;
 }
+
+
 
 
 .eee{
@@ -258,9 +356,15 @@ tr{
 }
 
 
+
+
 .cafe{
   width: 500px;
 }
+
+
+
+
 
 
 
@@ -272,9 +376,13 @@ tr{
 }
 
 
+
+
 .contacts_part_one{
   margin-left: 9%;
 }
+
+
 
 
 .contacts_part_two{
@@ -286,10 +394,14 @@ tr{
 }
 
 
+
+
 .section_one{
   display: flex;
   gap: 50px;
 }
+
+
 
 
 .img_sales{
@@ -298,10 +410,14 @@ tr{
 }
 
 
+
+
 .sales_text{
   display: flex;
   flex-direction: column;
 }
+
+
 
 
 .sales_links{
@@ -310,15 +426,23 @@ tr{
 }
 
 
+
+
 .section_two{
   display: flex;
   gap: 80px;
 }
 
 
+
+
 .section_two p{
   font-size: 15px;
 }
+
+
+
+
 
 
 
@@ -330,16 +454,22 @@ tr{
 }
 
 
+
+
 .img_coffee{
   height: 420px;
   width: 550px;
 }
 
 
+
+
 .coffee_text{
   display: flex;
   flex-direction: column;
 }
+
+
 
 
 .section_four{
@@ -350,6 +480,8 @@ tr{
 }
 
 
+
+
 .section_four_div{
   border: 1px solid rgb(117, 98, 98);
   border-radius: 5px;
@@ -357,12 +489,18 @@ tr{
   width: 350px;
 
 
+
+
 }
+
+
 
 
 .section_four_div h1, .section_four_div p, .section_four_div a{
   margin-left: 20px;
 }
+
+
 
 
 .section_four_div img{
@@ -371,6 +509,8 @@ tr{
 .section_four_div h1{
  font-size: 26px;
 }
+
+
 
 
 .btn_one{
@@ -384,6 +524,8 @@ tr{
 }
 
 
+
+
 .end{
   display: flex;
   justify-content: space-between;
@@ -395,6 +537,8 @@ tr{
 }
 
 
+
+
 .end_part_two{
   margin-right: 8%;
   display: flex;
@@ -402,10 +546,12 @@ tr{
   gap: 20px;
 }
 
+
 .posituka{
   text-decoration: none;
   color: black;
 }
+
 
 .button{
 display: flex;
@@ -423,9 +569,12 @@ display: block;
 }
 
 
+
+
 .full-menu-button:hover {
 box-shadow: 0px 3px 3px gray;
 }
+
 
 .second_row, .first_row, .third_row, .fourth_row{
 display: flex;
@@ -433,9 +582,13 @@ justify-content: center;
 }
 .fourth_row {
 
+
 align-items: center;
 width:100%;
 }
+
+
+
 
 
 
@@ -443,7 +596,10 @@ details[open] .header-summary::after {
 transform: rotate(270deg) scaleX(1.3);
 
 
+
+
 }
+
 
 .menu-content {
 display: flex;
@@ -453,9 +609,11 @@ margin-top: 10px;
 background-color: #fff;
 padding: 15px;
 border: 1px solid #e0e0e0;
-max-width: 400px;
+max-width: 450px;
 margin: 0 auto;
 }
+
+
 
 
 .menu-item {
@@ -464,16 +622,20 @@ width: 20%;
 max-width: 100px;
 }
 
+
 .menu-item img {
 width: 80px;
 height: auto;
 }
+
 
 .menu-item span {
 display: block;
 margin-top: 5px;
 font-size: 14px;
 }
+
+
 
 
 .header-summary {
@@ -487,15 +649,61 @@ padding-right: 20px;
 }
 
 
+
+
 .header-summary::after {
-content: 'ᐳ'; 
+content: 'ᐳ';
 font-size: 12px;
 margin-left: 8px;
 display: inline-block;
 transform: rotate(90deg) scaleX(1.3);
 transition: transform 0.3s ease;
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container {
     position: relative;
@@ -503,23 +711,28 @@ transition: transform 0.3s ease;
     overflow: hidden;
 }
 
+
 .slider-wrapper {
     position: relative;
 }
+
 
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
+
 .slider img {
     width: 100%;
     display: none; /* Скрываем все изображения по умолчанию */
 }
 
+
 .slider img.active {
     display: block; /* Показываем только активное изображение */
 }
+
 
 .slider-nav {
     position: absolute; /* Позиционируем элементы */
@@ -530,6 +743,8 @@ transition: transform 0.3s ease;
     gap: 10px; /* Отступ между кнопками */
     z-index: 1000; /* Убедитесь, что кнопки находятся поверх других элементов */
 }
+
+
 
 
 .slider-nav a {
@@ -545,13 +760,16 @@ transition: transform 0.3s ease;
     justify-content: center; /* Горизонтальное выравнивание */
 }
 
+
 .slider-nav a:hover {
     background-color: rgba(0, 0, 0, 0.1); /* Эффект при наведении */
 }
 
+
 .slider-wrapper {
     position: relative;
 }
+
 
 .prev, .next {
     position: absolute;
@@ -565,19 +783,23 @@ transition: transform 0.3s ease;
     z-index: 10; /* Чтобы кнопки были поверх изображений */
 }
 
+
 .prev {
     left: 10px; /* Сдвиньте кнопку влево */
 }
 
+
 .next {
     right: 10px; /* Сдвиньте кнопку вправо */
 }
+
 
 #navigation {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
+
 
 button {
     padding: 10px 20px;
@@ -586,6 +808,7 @@ button {
     font-size: 16px;
 }
 
+
 .prev, .next, .pause-play {
     border: none; /* Убираем рамку */
     background-color: transparent; /* Прозрачный фон */
@@ -593,24 +816,29 @@ button {
     cursor: pointer; /* Курсор в виде указателя */
 }
 
+
 .slide {
     opacity: 0;
     transition: opacity 0.5s ease; /* Плавный переход для изменения прозрачности */
 }
 
+
 .slide.active {
     opacity: 1; /* Полная видимость для активного слайда */
 }
+
 
 .pause-play{
 position: relative;
 top: -50px;
 }
 
+
 .slider-nav {
 position: absolute;
 top: 85%; /* Вместо фиксированного значения используем относительное */
 left: 50%;
+
 
 transform: translateX(-50%);
 display: flex;
@@ -618,14 +846,23 @@ gap: 10px;
 z-index: 1000;
 }
 
+
 @media(max-width: 768px) {
 .slider-nav {
-top: 65%; /* Adjust this value for smaller screens */
+top: 65%;
 }
 }
 
+
 @media(max-width: 480px) {
 .slider-nav {
-top: 60%; /* Adjust this value for mobile screens */
+top: 60%;
 }
 }
+
+
+
+
+
+
+
